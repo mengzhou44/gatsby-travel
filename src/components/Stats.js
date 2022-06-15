@@ -6,7 +6,13 @@ import { FaMoneyCheck } from "react-icons/fa"
 
 const statsData = [
   {
-    icon: <GiEarthAmerica />,
+    icon: (
+      <GiEarthAmerica
+        style={{
+          color: "#f34fae",
+        }}
+      />
+    ),
     title: "Over 100 destinations",
     desc: "Travel to over 100 unique places",
   },
