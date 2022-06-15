@@ -1,24 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
+import Hero from "../components/Hero"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import Testimonials from "../components/Testimonials"
+import Trips from "../components/Trips"
+import Stats from "../components/Stats"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <StaticImage
-        src="../images/gatsby-astronaut.png"
-        alt="gatsby astronaut"
-      />
-    </div>
-    <p><Link to="/page-2/">Go to page 2</Link></p>
-    <p><Link to="/using-typescript/">Go to "Using TypeScript"</Link></p>
+    <Hero />
+    <Trips heading="Our favorite destinations" />
+    <Testimonials />
+    <Stats />
   </Layout>
 )
 

@@ -6,6 +6,7 @@
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
     "autoprefixer": "^10.4.4",
+    "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.11.2",
     "gatsby-plugin-google-analytics": "^4.0.0",
     "gatsby-plugin-image": "^2.5.2",
@@ -15,13 +16,17 @@
     "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-react-helmet": "^5.5.0",
     "gatsby-plugin-sharp": "^4.11.1",
+    "gatsby-plugin-styled-components": "^5.16.0",
     "gatsby-source-filesystem": "^4.5.2",
+    "gatsby-transformer-json": "^4.16.0",
     "gatsby-transformer-sharp": "^4.5.0",
     "postcss": "^8.4.5",
     "prop-types": "^15.7.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.4.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
@@ -35,7 +40,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "npm run clean && npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
