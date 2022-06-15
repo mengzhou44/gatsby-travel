@@ -1,11 +1,45 @@
 import React from "react"
 import styled from "styled-components"
+import { GiEarthAmerica } from "react-icons/gi"
+import { MdAirplanemodeActive, MdTimer } from "react-icons/md"
+import { FaMoneyCheck } from "react-icons/fa"
+
+const statsData = [
+  {
+    icon: <GiEarthAmerica />,
+    title: "Over 100 destinations",
+    desc: "Travel to over 100 unique places",
+  },
+  {
+    icon: <MdAirplanemodeActive />,
+    title: "1 Million trips made",
+    desc: "Over one million trips made last year!",
+  },
+  {
+    icon: <MdTimer />,
+    title: "Fatest support",
+    desc: "Access our support 24/7",
+  },
+  {
+    icon: <FaMoneyCheck />,
+    title: "Best deals",
+    desc: "We offer the best price",
+  },
+]
 
 const Stats = () => {
   return (
     <StatsContainer>
       <Heading>Why Choose Us?</Heading>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        {statsData.map((item, index) => (
+          <StatsBox key={index}>
+            <Icon>{item.icon}</Icon>
+            <Title>{item.title}</Title>
+            <Description>{item.desc}</Description>
+          </StatsBox>
+        ))}
+      </Wrapper>
     </StatsContainer>
   )
 }
@@ -36,3 +70,19 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `
+
+const StatsBox = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  transition: 0.3s;
+`
+const Icon = styled.div`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+`
+const Title = styled.div`
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  margin-bottom: 0.5rem;
+`
+const Description = styled.div``
