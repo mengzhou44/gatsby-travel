@@ -66,7 +66,7 @@ const Trips = ({ heading }) => {
 export default Trips
 
 const ProductsContainer = styled.div`
-  border: 1px solid red;
+  padding-top: 20px; 
   min-height: 100vh;
   background: #fff;
   color: #fff;

@@ -9,7 +9,7 @@ const statsData = [
     icon: (
       <GiEarthAmerica
         style={{
-          color: "#f34fae",
+          color: "#047fb1",
         }}
       />
     ),
@@ -17,17 +17,35 @@ const statsData = [
     desc: "Travel to over 100 unique places",
   },
   {
-    icon: <MdAirplanemodeActive />,
+    icon: (
+      <MdAirplanemodeActive
+        style={{
+          color: "#f3a82e",
+        }}
+      />
+    ),
     title: "1 Million trips made",
     desc: "Over one million trips made last year!",
   },
   {
-    icon: <MdTimer />,
+    icon: (
+      <MdTimer
+        style={{
+          color: "#3af576",
+        }}
+      />
+    ),
     title: "Fatest support",
     desc: "Access our support 24/7",
   },
   {
-    icon: <FaMoneyCheck />,
+    icon: (
+      <FaMoneyCheck
+        style={{
+          color: "#047fb1",
+        }}
+      />
+    ),
     title: "Best deals",
     desc: "We offer the best price",
   },
@@ -87,8 +105,10 @@ const Icon = styled.div`
   font-size: 3rem;
   margin-bottom: 1rem;
 `
-const Title = styled.div`
+const Title = styled.p`
   font-size: clamp(1rem, 2.5vw, 2rem);
   margin-bottom: 0.5rem;
 `
-const Description = styled.div``
+const Description = styled.p`
+  font-size: 1.5rem;
+`
