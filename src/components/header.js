@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
@@ -6,10 +6,27 @@ import { menuData } from "../data/menu-data"
 import { Button } from "./Button"
 
 function Header() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
+
+  const listener = () => setShowMobileMenu(false)
+
+  useEffect(() => {
+    window.addEventListener("resize", listener)
+
+    return () => {
+      window.removeEventListener("resize", listener)
+    }
+  }, [])
+
   return (
     <Nav>
       <NavLink to="/">EXPLORIX</NavLink>
-      <Bars />
+      <Bars
+        onClick={() => {
+          setShowMobileMenu(!showMobileMenu)
+          console.log(showMobileMenu)
+        }}
+      />
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink key={index} to={item.link}>
@@ -17,6 +34,16 @@ function Header() {
           </NavLink>
         ))}
       </NavMenu>
+      {showMobileMenu === true && (
+        <MobileMenu>
+          {menuData.map((item, index) => (
+            <NavLink key={index} to={item.link}>
+              {item.title}
+            </NavLink>
+          ))}
+        </MobileMenu>
+      )}
+
       <NavButton>
         <Button primary="true" round="true" to="/trips">
           Book a flight
@@ -54,12 +81,14 @@ const Bars = styled(FaBars)`
 
   @media screen and (max-width: 768px) {
     display: block;
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 3;
   }
 `
 
@@ -69,6 +98,21 @@ const NavMenu = styled.div`
 
   @media screen and (max-width: 768px) {
     display: none;
+  }
+`
+
+const MobileMenu = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    width: 50%;
   }
 `
 
