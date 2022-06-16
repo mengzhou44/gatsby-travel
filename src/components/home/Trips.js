@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Button } from "./Button"
 import { ImLocation } from "react-icons/im"
+import { Button } from "../Button"
 
 const Trips = ({ heading }) => {
   const data = useStaticQuery(graphql`

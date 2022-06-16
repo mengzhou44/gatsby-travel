@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import EmailBg from "../assets/images/email.jpg"
+import EmailBg from "../../assets/images/email.jpg"
 import { Button } from "../Button"
 
 const Email = () => {
