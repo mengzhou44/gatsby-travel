@@ -14,6 +14,7 @@ const Trips = ({ heading }) => {
             button
             id
             name
+            alt
             img {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED)

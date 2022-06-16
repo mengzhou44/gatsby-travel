@@ -58,6 +58,7 @@ const Testimonials = () => {
             <Image
               key={edge.node.id}
               image={edge.node.childImageSharp.gatsbyImageData}
+              alt="alt"
             />
           ))}
         </ColumnTwo>
