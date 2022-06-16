@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby & TailwindCSS starter
+   Gatsby Travel Site 
 </h1>
 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=security_rating)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=kosvrouvas_gatsby-tailwindcss-starter&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=kosvrouvas_gatsby-tailwindcss-starter)
