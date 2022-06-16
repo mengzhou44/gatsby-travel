@@ -12,25 +12,25 @@ const Footer = () => {
         </FooterDesc>
         <FooterLinkItems>
           <FooterLinkTitle>Contact Us</FooterLinkTitle>
-          <FooterLink to="/">Support</FooterLink>
-          <FooterLink to="/">Destinations</FooterLink>
-          <FooterLink to="/">Sponsorships</FooterLink>
+          <FooterLink to="/page-2">Support</FooterLink>
+          <FooterLink to="/page-2">Destinations</FooterLink>
+          <FooterLink to="/page-2">Sponsorships</FooterLink>
         </FooterLinkItems>
       </FooterLinksWrapper>
       <FooterLinksWrapper>
         <FooterLinkItems>
           <FooterLinkTitle>Videos</FooterLinkTitle>
-          <FooterLink to="/">Submit Videos</FooterLink>
-          <FooterLink to="/">Ambassadors</FooterLink>
-          <FooterLink to="/">Agency</FooterLink>
-          <FooterLink to="/">Influence</FooterLink>
+          <FooterLink to="/page-2">Submit Videos</FooterLink>
+          <FooterLink to="/page-2">Ambassadors</FooterLink>
+          <FooterLink to="/page-2">Agency</FooterLink>
+          <FooterLink to="/page-2">Influence</FooterLink>
         </FooterLinkItems>
         <FooterLinkItems>
           <FooterLinkTitle>Social Media</FooterLinkTitle>
-          <FooterLink to="/">Instagram</FooterLink>
-          <FooterLink to="/">Youtube</FooterLink>
-          <FooterLink to="/">Facebook</FooterLink>
-          <FooterLink to="/">Twitter</FooterLink>
+          <FooterLink to="/page-2">Instagram</FooterLink>
+          <FooterLink to="/page-2">Youtube</FooterLink>
+          <FooterLink to="/page-2">Facebook</FooterLink>
+          <FooterLink to="/page-2">Twitter</FooterLink>
         </FooterLinkItems>
       </FooterLinksWrapper>
     </FooterContainer>

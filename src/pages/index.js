@@ -1,16 +1,15 @@
 import React from "react"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import SearchEngineOptimization from "../components/SearchEngineOptimization"
 import Testimonials from "../components/Testimonials"
 import Trips from "../components/Trips"
 import Stats from "../components/Stats"
 import Email from "../components/Email"
 
-
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+  <Layout isHomePage={true}>
+    <SearchEngineOptimization title="Home" />
     <Hero />
     <Trips heading="Our Favorite Destinations" />
     <Testimonials />

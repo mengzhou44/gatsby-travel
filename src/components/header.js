@@ -4,29 +4,30 @@ import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
 import { menuData } from "../data/menu-data"
 import { Button } from "./Button"
+import { AiOutlineCloseCircle } from "react-icons/ai"
 
-function Header() {
+function Header({isHomePage}) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const listener = () => setShowMobileMenu(false)
 
   useEffect(() => {
     window.addEventListener("resize", listener)
-
     return () => {
       window.removeEventListener("resize", listener)
     }
   }, [])
 
   return (
-    <Nav>
+    <Nav isHomePage={isHomePage} showMobileMenu={showMobileMenu}>
       <NavLink to="/">EXPLORIX</NavLink>
-      <Bars
-        onClick={() => {
-          setShowMobileMenu(!showMobileMenu)
-          console.log(showMobileMenu)
-        }}
-      />
+      {showMobileMenu === false && (
+        <Bars
+          onClick={() => {
+            setShowMobileMenu(true)
+          }}
+        />
+      )}
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink key={index} to={item.link}>
@@ -36,6 +37,7 @@ function Header() {
       </NavMenu>
       {showMobileMenu === true && (
         <MobileMenu>
+          <IconClose onClick={() => setShowMobileMenu(false)} />
           {menuData.map((item, index) => (
             <NavLink key={index} to={item.link}>
               {item.title}
@@ -56,8 +58,8 @@ function Header() {
 export default Header
 
 const Nav = styled.nav`
-  background: transparent;
-  height: 80px;
+  background: ${({ isHomePage }) => (isHomePage ? "transparent" : "#00B34D")};
+  height: ${({ showMobileMenu }) => (showMobileMenu ? "400px" : "80px")};
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1300px) / 2);
@@ -88,7 +90,6 @@ const Bars = styled(FaBars)`
     transform: translate(-100%, 75%);
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 3;
   }
 `
 
@@ -113,6 +114,7 @@ const MobileMenu = styled.div`
     right: 0;
     height: 200px;
     width: 50%;
+    padding-top: 10px; 
   }
 `
 
@@ -124,4 +126,13 @@ const NavButton = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
+`
+
+const IconClose = styled(AiOutlineCloseCircle)`
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fefefe;
+  cursor: pointer;
 `
