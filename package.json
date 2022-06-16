@@ -5,6 +5,7 @@
   "version": "0.3.0",
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
+    "@fontsource/roboto": "^4.5.7",
     "autoprefixer": "^10.4.4",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.11.2",

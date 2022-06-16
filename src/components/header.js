@@ -6,7 +6,7 @@ import { menuData } from "../data/menu-data"
 import { Button } from "./Button"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 
-function Header({isHomePage}) {
+function Header({ isHomePage }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const listener = () => setShowMobileMenu(false)
@@ -20,7 +20,7 @@ function Header({isHomePage}) {
 
   return (
     <Nav isHomePage={isHomePage} showMobileMenu={showMobileMenu}>
-      <NavLink to="/">EXPLORIX</NavLink>
+      <HomeLink to="/">EXPLORIX</HomeLink>
       {showMobileMenu === false && (
         <Bars
           onClick={() => {
@@ -39,7 +39,11 @@ function Header({isHomePage}) {
         <MobileMenu>
           <IconClose onClick={() => setShowMobileMenu(false)} />
           {menuData.map((item, index) => (
-            <NavLink key={index} to={item.link}>
+            <NavLink
+              key={index}
+              to={item.link}
+              onClick={() => setShowMobileMenu(false)}
+            >
               {item.title}
             </NavLink>
           ))}
@@ -58,13 +62,24 @@ function Header({isHomePage}) {
 export default Header
 
 const Nav = styled.nav`
-  background: ${({ isHomePage }) => (isHomePage ? "transparent" : "#00B34D")};
-  height: ${({ showMobileMenu }) => (showMobileMenu ? "400px" : "80px")};
+  background: ${({ isHomePage }) => (isHomePage ? "transparent" : "#064f40")};
+  height: ${({ showMobileMenu }) => (showMobileMenu ? "250px" : "80px")};
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1300px) / 2);
   z-index: 100;
   position: relative;
+`
+
+const HomeLink = styled(Link)`
+  color: #fff;
+  height: 100%;
+  text-decoration: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 10px;
 `
 
 const NavLink = styled(Link)`
@@ -96,6 +111,7 @@ const Bars = styled(FaBars)`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  margin-left: 40%;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -114,7 +130,7 @@ const MobileMenu = styled.div`
     right: 0;
     height: 200px;
     width: 50%;
-    padding-top: 10px; 
+    padding-top: 10px;
   }
 `
 

@@ -1,11 +1,12 @@
 import React from "react"
-import Hero from "../components/Hero"
+
 import Layout from "../components/Layout"
 import SearchEngineOptimization from "../components/SearchEngineOptimization"
-import Testimonials from "../components/Testimonials"
-import Trips from "../components/Trips"
-import Stats from "../components/Stats"
-import Email from "../components/Email"
+import Testimonials from "../components/home/Testimonials"
+import Hero from "../components/home/Hero"
+import Trips from "../components/home/Trips"
+import Stats from "../components/home/Stats"
+import Email from "../components/home/Email"
 
 const IndexPage = () => (
   <Layout isHomePage={true}>
