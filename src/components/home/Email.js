@@ -14,26 +14,9 @@ const Email = () => {
             <label htmlFor="email">
               <input id="email" type="text" />
             </label>
-            <Button
-              as="button"
-              type="submit"
-              primary="true"
-              round="true"
-              css={`
-                height: 48px;
-
-                @media screen and (max-width: 768px) {
-                  width: 100%;
-                  min-width: 350px;
-                }
-                @media screen and (max-width: 400px) {
-                  width: 100%;
-                  min-width: 250px;
-                }
-              `}
-            >
+            <SignUpButton as="button" type="submit" primary="true" round="true">
               Sign Up
-            </Button>
+            </SignUpButton>
           </FormWrapper>
         </form>
       </EmailContent>
@@ -42,6 +25,19 @@ const Email = () => {
 }
 
 export default Email
+
+const SignUpButton = styled(Button)`
+  height: 48px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    min-width: 300px;
+  }
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    min-width: 200px;
+  }
+`
 
 const EmailContainer = styled.div`
   background: linear-gradient(
@@ -60,7 +56,7 @@ const EmailContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; 
+  margin-top: 20px;
 `
 
 const EmailContent = styled.div`
