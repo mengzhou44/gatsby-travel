@@ -84,6 +84,9 @@ const Heading = styled.h1`
   font-size: clamp(1.5rem, 5vw, 2rem);
   padding: 0 2rem;
   margin-bottom: 3rem;
+  @media screen and (max-width: 600px ) {
+     margin-bottom: 1rem; 
+  } 
 `
 const Wrapper = styled.div`
   display: grid;

@@ -88,6 +88,12 @@ const Description = styled.p`
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
   margin-bottom: 4rem;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+ 
+  }
 `
 const ContentWrapper = styled.div`
   display: grid;
@@ -135,7 +141,7 @@ const Image = styled(GatsbyImage)`
     height: 310px;
     object-fit: cover;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
 `
 

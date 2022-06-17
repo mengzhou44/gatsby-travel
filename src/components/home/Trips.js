@@ -38,7 +38,12 @@ const Trips = ({ heading }) => {
             <ImLocation />
             <ProductTitle>{edge.node.name}</ProductTitle>
           </TextWrap>
-          <Button to="/trips" primary="true" round="true">
+          <Button
+            to="/trips"
+            primary="true"
+            round="true"
+            css={{ padding: "10px" }}
+          >
             {edge.node.button}
           </Button>
         </ProductInfo>
@@ -63,7 +68,7 @@ const ProductsContainer = styled.div`
   color: #fff;
 
   @media screen and (max-width: 600px) {
-    margin-top: -2rem;
+    margin-top: -3rem;
   }
 `
 
@@ -73,7 +78,9 @@ const ProductsHeading = styled.div`
   margin-bottom: 5rem;
   color: #000;
 
- 
+  @media screen and (max-width: 600px) {
+    margin-bottom: 3rem;
+  }
 `
 
 const ProductsWrapper = styled.div`

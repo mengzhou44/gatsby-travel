@@ -36,9 +36,10 @@ export default Hero
 const HeroContainer = styled.div`
   padding: 0 1rem;
   height: 100vh;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 `
 const HeroBg = styled.div`
   position: absolute;

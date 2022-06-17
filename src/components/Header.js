@@ -100,7 +100,7 @@ const Bars = styled(FaBars)`
     display: block;
     cursor: pointer;
     position: absolute;
-    top: 0;
+    top: 5;
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.5rem;
