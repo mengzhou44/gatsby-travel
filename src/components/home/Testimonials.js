@@ -131,10 +131,10 @@ const Image = styled(GatsbyImage)`
   border-radius: 10px;
   height: 100%;
   @media screen and (max-width: 500px) {
-      width: 70%; 
-      height: 320px; 
-      object-fit: scale-down;
-      margin: 0 auto;
+    width: 70%;
+    height: 320px;
+    object-fit: scale-down;
+    margin: 0 auto;
   }
 `
 

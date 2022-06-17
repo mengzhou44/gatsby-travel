@@ -39,22 +39,9 @@ const HeroContainer = styled.div`
   padding: 0 1rem;
   height: 100vh;
   margin-top: -80px;
-
-  :before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-  }
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 `
 const HeroBg = styled.div`
   position: absolute;
@@ -67,13 +54,8 @@ const HeroBg = styled.div`
   overflow: hidden;
 `
 
-const HeroContent = styled.div`
-  z-index: 3;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`
+const HeroContent = styled.div``
+
 const HeroItems = styled.div`
   display: flex;
   flex-direction: column;
