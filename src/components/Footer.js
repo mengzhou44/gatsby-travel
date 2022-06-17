@@ -54,6 +54,12 @@ const FooterDesc = styled.div`
     color: #f26a2e;
   }
 
+  @media screen and (max-width: 500px) {
+     p {
+         line-height: 1.5; 
+     }
+  }
+
   @media screen and (max-width: 400px) {
     padding: 1rem;
   }

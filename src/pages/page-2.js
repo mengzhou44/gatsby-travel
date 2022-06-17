@@ -5,7 +5,6 @@ import Layout from "../components/Layout"
 
 const SecondPage = () => (
   <Layout isHomePage={false}>
-    <h1>Hi from the second page</h1>
   </Layout>
 )
 

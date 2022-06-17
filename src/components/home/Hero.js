@@ -1,20 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 import { Button } from "../Button"
-import video from "../../assets/videos/travel.mp4"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
   return (
     <HeroContainer>
       <HeroBg>
-        <VideoBg
-          src={video}
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-        ></VideoBg>
+        <StaticImage
+          src="../../assets/images/hero.jpg"
+          alt="images"
+          placeholder="blurred"
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "cover",
+          }}
+        />
       </HeroBg>
       <HeroContent>
         <HeroItems>
@@ -33,10 +35,7 @@ export default Hero
 
 const HeroContainer = styled.div`
   background: #0c0c0c;
-  display: flex;
-  justify-content: center;
   color: #fff;
-  align-items: center;
   padding: 0 1rem;
   height: 100vh;
   margin-top: -80px;
@@ -57,7 +56,6 @@ const HeroContainer = styled.div`
       linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
   }
 `
-
 const HeroBg = styled.div`
   position: absolute;
   top: 0;
@@ -68,17 +66,13 @@ const HeroBg = styled.div`
   height: 100%;
   overflow: hidden;
 `
-const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`
 
 const HeroContent = styled.div`
   z-index: 3;
-  height: calc(100vh-80px);
-  max-height: 100%;
-  padding: calc((100vw - 1300px) / 2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 const HeroItems = styled.div`
   display: flex;

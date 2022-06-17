@@ -38,20 +38,10 @@ const Trips = ({ heading }) => {
             <ImLocation />
             <ProductTitle>{edge.node.name}</ProductTitle>
           </TextWrap>
+          <Button to="/trips" primary="true" round="true">
+            {edge.node.button}
+          </Button>
         </ProductInfo>
-        <Button
-          to="/trips"
-          primary="true"
-          round="true"
-          css={`
-            position: absolute;
-            top: 420px;
-            left: 20px;
-            font-size: 14px;
-          `}
-        >
-          {edge.node.button}
-        </Button>
       </ProductCard>
     )
   })
@@ -67,7 +57,7 @@ const Trips = ({ heading }) => {
 export default Trips
 
 const ProductsContainer = styled.div`
-  padding-top: 20px; 
+  padding-top: 20px;
   min-height: 100vh;
   background: #fff;
   color: #fff;
@@ -91,7 +81,7 @@ const ProductsWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: 868px) {
+  @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 `
@@ -104,13 +94,23 @@ const ProductCard = styled.div`
   position: relative;
   border-radius: 10px;
   transition: 0.2s ease;
+  @media screen and (max-width: 868px) {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
 `
 
 const ProductImage = styled(GatsbyImage)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
   height: 100%;
   max-width: 100%;
-  position: relative;
-  border-radius: 10px;
+  z-index: 0;
   filter: brightness(70%);
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -123,15 +123,21 @@ const ProductInfo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0 2rem;
+  min-height: 100px;
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
   @media screen and (max-width: 280px) {
     padding: 0 1rem;
+    border: 1px solid red !important;
   }
 `
 const TextWrap = styled.div`
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 375px;
 `
 const ProductTitle = styled.div`
   font-weight: 400;
