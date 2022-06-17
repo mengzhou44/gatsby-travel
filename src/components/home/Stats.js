@@ -102,7 +102,7 @@ const StatsBox = styled.div`
   transition: 0.3s;
 `
 const Icon = styled.div`
-  font-size: 3rem;
+  font-size: clamp(2rem, 2.5vw, 3rem);
   margin-bottom: 1rem;
 `
 const Title = styled.p`

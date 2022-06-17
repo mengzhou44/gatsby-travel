@@ -135,17 +135,19 @@ const Image = styled(GatsbyImage)`
     height: 320px;
     object-fit: scale-down;
     margin: 0 auto;
+    border-radius: 10px;
   }
 `
 
 const IconLightbulb = styled(FaRegLightbulb)`
   color: #f9b19b;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: 1rem;
+  
 `
 
 const IconCheckmarkCircle = styled(IoMdCheckmarkCircleOutline)`
   color: #3fffa8;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: 1rem;
 `
