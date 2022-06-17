@@ -66,7 +66,7 @@ const ProductsContainer = styled.div`
   min-height: 100vh;
   background: #fff;
   color: #fff;
-
+  border: 1px solid red;
   @media screen and (max-width: 600px) {
     margin-top: -3rem;
   }
