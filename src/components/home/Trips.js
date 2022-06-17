@@ -61,6 +61,9 @@ const ProductsContainer = styled.div`
   min-height: 100vh;
   background: #fff;
   color: #fff;
+  @media screen and (max-width: 600px) {
+     padding-top: 5px; 
+  }
 `
 
 const ProductsHeading = styled.div`
@@ -68,6 +71,7 @@ const ProductsHeading = styled.div`
   text-align: center;
   margin-bottom: 5rem;
   color: #000;
+
 `
 
 const ProductsWrapper = styled.div`

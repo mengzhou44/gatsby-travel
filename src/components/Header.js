@@ -62,7 +62,7 @@ function Header({ isHomePage }) {
 export default Header
 
 const Nav = styled.nav`
-  background: ${({ isHomePage }) => (isHomePage ? "transparent" : "#064f40")};
+  background: ${({ isHomePage }) => (isHomePage ? "transparent" : "#528BA7")};
   height: ${({ showMobileMenu }) => (showMobileMenu ? "250px" : "80px")};
   display: flex;
   justify-content: space-between;
@@ -128,9 +128,10 @@ const MobileMenu = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    left: 0;
     height: 200px;
-    width: 50%;
     padding-top: 10px;
+    background: #528ba7;
   }
 `
 
