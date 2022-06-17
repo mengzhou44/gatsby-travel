@@ -66,7 +66,7 @@ const ProductsContainer = styled.div`
   min-height: 100vh;
   background: #fff;
   color: #fff;
-  border: 1px solid red;
+
   @media screen and (max-width: 600px) {
     margin-top: -3rem;
   }
@@ -145,7 +145,6 @@ const ProductInfo = styled.div`
 
   @media screen and (max-width: 280px) {
     padding: 0 1rem;
-    border: 1px solid red !important;
   }
 `
 const TextWrap = styled.div`

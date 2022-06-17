@@ -137,8 +137,8 @@ const Image = styled(GatsbyImage)`
   border-radius: 10px;
   height: 100%;
   @media screen and (max-width: 500px) {
-    width: 75%;
-    height: 310px;
+    width: 80%;
+    height: 350px;
     object-fit: cover;
     margin: 0 auto;
     border-radius: 10px !important;
