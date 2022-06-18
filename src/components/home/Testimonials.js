@@ -92,7 +92,6 @@ const Description = styled.p`
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
     margin-bottom: 1rem;
- 
   }
 `
 const ContentWrapper = styled.div`
@@ -121,6 +120,10 @@ const Testimonial = styled.div`
   p {
     color: #3b3b3b;
   }
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 `
 const ColumnTwo = styled.div`
   display: grid;
@@ -137,8 +140,8 @@ const Image = styled(GatsbyImage)`
   border-radius: 10px;
   height: 100%;
   @media screen and (max-width: 500px) {
-    width: 80%;
-    height: 350px;
+    max-width: 85%;
+    height: 300px;
     object-fit: cover;
     margin: 0 auto;
     border-radius: 10px !important;
@@ -149,7 +152,6 @@ const IconLightbulb = styled(FaRegLightbulb)`
   color: #f9b19b;
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: 1rem;
-  
 `
 
 const IconCheckmarkCircle = styled(IoMdCheckmarkCircleOutline)`

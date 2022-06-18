@@ -63,7 +63,7 @@ export default Header
 
 const Nav = styled.nav`
   background: ${({ isHomePage }) => (isHomePage ? "transparent" : "#528BA7")};
-  height: ${({ showMobileMenu }) => (showMobileMenu ? "250px" : "80px")};
+  height: 80px; 
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1300px) / 2);
@@ -132,9 +132,9 @@ const MobileMenu = styled.div`
     height: 200px;
     padding-top: 10px;
     background: #528ba7;
+    z-index: 3; 
   }
 `
-
 const NavButton = styled.div`
   display: flex;
   align-items: center;

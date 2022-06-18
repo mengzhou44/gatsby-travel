@@ -103,10 +103,13 @@ const StatsBox = styled.div`
   width: 100%;
   padding: 0 2rem;
   transition: 0.3s;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 `
 const Icon = styled.div`
   font-size: clamp(2rem, 2.5vw, 3rem);
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 `
 const Title = styled.p`
   font-size: clamp(1rem, 2.5vw, 2rem);

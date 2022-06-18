@@ -39,6 +39,7 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+ 
   :before {
     content: "";
     position: absolute;
@@ -63,11 +64,12 @@ const HeroBg = styled.div`
   bottom: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  
 `
 
 const HeroContent = styled.div`
-   z-index: 3;
+  z-index: 3;
+  height: calc(100vh-80px);
 `
 
 const HeroItems = styled.div`
@@ -78,6 +80,7 @@ const HeroItems = styled.div`
   text-align: center;
   height: 100vh;
   max-height: 100%;
+
   padding: 0;
   color: #fff;
   font-weight: bold;
