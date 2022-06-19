@@ -37,10 +37,11 @@ const Trips = ({ heading }) => {
             <ProductTitle>{edge.node.name}</ProductTitle>
           </TextWrap>
           <Button
-            to="/trips"
+            as="button"
             primary="true"
             round="true"
             css={{ padding: "10px" }}
+            onClick={() => window.gtag("event", "click", { name: edge.node.name })}
           >
             {edge.node.button}
           </Button>
