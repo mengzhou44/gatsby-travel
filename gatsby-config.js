@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [":G-6JB3PTL1Y7"],
+        trackingIds: ["G-6JB3PTL1Y7"],
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
