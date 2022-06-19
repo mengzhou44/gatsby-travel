@@ -8,17 +8,15 @@ import { Button } from "../Button"
 const Trips = ({ heading }) => {
   const data = useStaticQuery(graphql`
     query GetAllTrips {
-      allTripsDataJson {
+      trips: allContentfulTrip {
         edges {
           node {
-            button
-            id
-            name
             alt
+            button
+            name
+            id
             img {
-              childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED)
-              }
+              gatsbyImageData(layout: CONSTRAINED)
             }
           }
         }
@@ -26,11 +24,11 @@ const Trips = ({ heading }) => {
     }
   `)
 
-  const trips = data.allTripsDataJson.edges.map(edge => {
+  const trips = data.trips.edges.map(edge => {
     return (
       <ProductCard key={edge.node.id}>
         <ProductImage
-          image={edge.node.img.childImageSharp.gatsbyImageData}
+          image={edge.node.img.gatsbyImageData}
           alt={edge.node.alt}
         />
         <ProductInfo>
