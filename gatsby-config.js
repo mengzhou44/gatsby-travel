@@ -9,6 +9,19 @@ module.exports = {
     author: `@kosvrouvas`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "GG-6JB3PTL1Y7",
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     `gatsby-plugin-styled-components`,
